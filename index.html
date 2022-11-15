@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Mutaz Hennawi - Full-stack Developer</title>
+</head>
+<body>
+    <canvas></canvas>
+        <button id="menuBtn" class="btn" style="display: none;">MENU</button>
+    <div class="menu" style="display: none;">
+        <h2>MENU</h2>
+        <ul>
+            <li><a target="_blank" href="./cv.pdf">Curriculum Vitae</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/mutazhennawi/">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/HennawiMutaz">Github</a></li>
+            <li><a target="_blank" href="https://hennawimutaz.github.io/portfolio/">Portfolio</a></li>
+            <li><a id="exitMenu">Exit</a></li>
+        </ul>
+    </div>
+    <div id="loading-screen">
+        <div id="avatar"></div>
+        <div>
+            <h5 id="loading-title">Loading...</h5>
+            <p style="display: none" id="progress"><span id="percentage"></span>%</p>
+        </div>
+    </div>
+    <div class="start-screen" style="display: none;">
+        <h1>Click start to begin.</h1>
+        <button class="start-btn">Start</button>
+        <footer>
+            <p>Welcome to my portfolio</p>
+            <h3> <a target="_blank" href="https://github.com/HennawiMutaz"> Mutaz </a> </h3>
+        </footer>
+    </div>
+    <div id="modal1" class="modal" style="display: none;">
+        <div class="options">
+            <button class="close-btn">X</button>
+        </div>
+        <div class="card-title">
+            <h1>About Me</h1>
+        </div>
+        <hr>
+        <p class="message">
+            <img class="avatar-img" src="./images/avatar.png" alt="avatar">
+            My name is Mutaz Hennawi and I am a creative web developer.
+            I'm currently based in Edmonton, AB. My main focus lies on full-stack, JavaScript and ReactJS development.
+
+            I also have rich experience as a backend developer, mostly in MERN (MongoDB, ExpressJS, React, Node.js) stack.
+
+            My first contact with web development was more than 6 years ago in high school. I liked how I can create something from nothing, so I began programming with PHP.
+
+            I learned everything by myself from the available resources & work experience and I gradually became a problem-solver and a full-stack developer!
+        </p>
+    </div>
+        <div id="modal2" class="modal" style="display: none;">
+            <div class="options">
+                <button class="close-btn">X</button>
+            </div>
+            <div class="message">
+                <div class="card-title">
+                    <h1>Technologies</h1>
+                </div>
+                <hr>
+                <div class="tech-bg html-bg">
+                    <img src="./img/dev-html.png" alt="html img">
+                    <div class="content">
+                        <h2>HTML & CSS</h2>
+                        <p class="semi-title">Structuring and styling</p>
+                        <p>Designing pixel-perfect sites is my strong suit. I always aim to ensure high quality graphic content with responsive designs!</p>
+                    </div>
+                </div>
+                <div class="tech-bg express-bg">
+                    <img src="./img/dev-expressjs.png" alt="express.js img">
+                    <div class="content">
+                        <h2>Express.JS</h2>
+                        <p class="semi-title">Framework for nodeJS apps</p>
+                        <p>I use Express.js as a backbone of backend applications and to build robust RESTful APIs.</p>
+                    </div>
+                </div>
+                <div class="tech-bg javascript-bg">
+                    <img src="./img/dev-javascript.png" alt="javascript img">
+                    <div class="content">
+                        <h2>Javascript</h2>
+                        <p class="semi-title">Programming Language</p>
+                        <p>It's a flexible language used to create anything. Scaling from backend to animations in canvas (yes, this website is programmed in vanilla JS).</p>
+                    </div>
+                </div>
+                <div class="tech-bg react-bg">
+                    <img src="./img/dev-react.png" alt="react img">
+                    <div class="content">
+                        <h2>React</h2>
+                        <p class="semi-title">Front-end JS framework for creating SPA applications</p>
+                        <p>I use it mainly for robust SPA applications (single page applications) of various kinds and complexity.</p>
+                    </div>
+                </div>
+                <div class="tech-bg php-bg">
+                    <img src="./img/dev-php.png" alt="php img">
+                    <div class="content">
+                        <h2>PHP</h2>
+                        <p class="semi-title">General-purpose scripting language geared toward web development.</p>
+                        <p>As a popular script language for client-server applications and dynamic web pages, PHP was the first language I learned for backend application.</p>
+                    </div>
+                </div>
+                <div class="tech-bg mysql-bg">
+                    <img src="./img/dev-mysql.png" alt="mysql img">
+                    <div class="content">
+                        <h2>MYSQL</h2>
+                        <p class="semi-title">Most popular SQL database</p>
+                        <p>When working with PHP, I use MySQL database the most often. I use it to this day for projects that need a simple relational database.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal3" class="modal short-modal" style="display: none;">
+            <div class="options">
+                <button class="close-btn">X</button>
+            </div>
+            <div class="message">
+                <div class="card-title">
+                    <h1>Contact</h1>
+                </div>
+                <hr>
+                <p>For any questions, you can always contact me!</p> <br>
+                <p class="contact-link"><a href="https://www.linkedin.com/in/mutazhennawi/" target="_blank">LinkedIn</a></p>
+                <p class="contact-link"><a href="https://github.com/HennawiMutaz" target="_blank">Github</a></p>
+                <p class="contact-link"><a href="mailto:mutazhennawi360@gmail.com">mutazhennawi360@gmail.com</a></p>
+            </div>
+        </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./data/collisions.js"></script>
+    <script src="./data/info-zones.js"></script>
+    <script src="classes.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
