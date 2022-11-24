@@ -222,8 +222,19 @@ const text2 = new Sprite({
     image: textImage2
 });
 
+const textImage3 = new Image();
+textImage3.src = './img/textImage3.png';
+const text3 = new Sprite({
+    position: {
+        x: canvas.width / 2 ,
+        y: screen.height / 2 
+    },
+    image: textImage3
+});
+
 let flag = false;
 let flag2 = false;
+let flag3 = false;
 
 const menuBtn = $('#menuBtn');
 const exitMenu = $('#exitMenu');
@@ -251,6 +262,10 @@ function startScreen() {
                     flag2 = true;
                     setTimeout(() => {
                         flag2 = false;
+                        flag3 = true;
+                        setTimeout(() => {
+                            flag3 = false;
+                        }, 5000);
                     }, 7000);
                 }, 9000);
             }, 3000);           
@@ -276,10 +291,15 @@ function animate() {
     text.position.x = player.position.x + 10;
     text.position.y = player.position.y - 70;
     if (flag) text.draw();
-    if (flag2) {
+    if (flag3) {
         text2.position.x = player.position.x + 10;
         text2.position.y = player.position.y - 70;
         text2.draw();
+    }
+    if (flag2) {
+        text3.position.x = player.position.x + 10;
+        text3.position.y = player.position.y - 70;
+        text3.draw();
     }
 
     let moving = true;
