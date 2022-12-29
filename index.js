@@ -119,11 +119,15 @@ const playerImageWidth = 192;
 const playerImageHeight = 68;
 
 
+let variable = 0;
+if (screen.width > 1600) {
+    variable = 75;
+}
 
 const player = new Sprite({
     position: {
-        x: canvas.width / 2 - (playerImageWidth / 4) / 2, // x pos of cropped image (where image is placed on x-axis)
-        y: screen.height / 2 - playerImageHeight / 2, // y pos of cropped image (where image is placed on y-axis) 
+        x: canvas.width / 2 - (playerImageWidth / 4) / 2 + variable, // x pos of cropped image (where image is placed on x-axis)
+        y: screen.height / 2 - playerImageHeight / 2 + variable, // y pos of cropped image (where image is placed on y-axis) 
     }, 
     image: playerDownImage,
     frames: {max: 4},
